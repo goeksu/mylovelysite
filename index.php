@@ -16,5 +16,5 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
 $date = (new DateTime())->setTimeZone(new DateTimeZone('Europe/Moscow'))->format('Y-m-d H:i:s');
 fwrite($file,$hits[0].') '. $date . '| ' . $ip."\n"); 
 fclose($file);
-echo "hi " + $ip + ". preciated to see you here. me? just a star dust, nothing more.. and sometimes code.";
+echo "hi " . $ip . ". preciated to see you here. me? just a star dust, nothing more.. and sometimes code.";
 ?>
