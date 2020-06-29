@@ -26,9 +26,16 @@ function get_client_ip() {
     return $ipaddress;
 }
 
+$ipaddresi = get_client_ip();
+if (strstr($ipaddresi, ', ')) {
+    $ips = explode(', ', $remoteIP);
+    $ipaddresi = $ips[0];
+}
+
+
 $date = (new DateTime())->setTimeZone(new DateTimeZone('Europe/Moscow'))->format('Y-m-d H:i:s');
 fwrite($file,$hits[0].') '. $date . '| ' . $ip."\n"); 
 fclose($file);
-echo "<center>hi " . get_client_ip() . ". preciated to see you here. me? just a star dust, nothing more.. and sometimes who code.";
+echo "<center>hi " . $ipaddresi . ". preciated to see you here. me? just a star dust, nothing more.. and sometimes who code.";
 echo "<br><br><br><br><iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/wZuW3YvHHLU?controls=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe><br><br><br><br><br><br>hello@goksu.in</center>";
 ?>
