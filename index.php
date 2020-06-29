@@ -28,7 +28,7 @@ function get_client_ip() {
 
 $ipaddresi = get_client_ip();
 if (strstr($ipaddresi, ', ')) {
-    $ips = explode(', ', $remoteIP);
+    $ips = explode(', ', $ipaddresi);
     $ipaddresi = $ips[0];
 }
 
