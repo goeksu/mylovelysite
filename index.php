@@ -1,11 +1,4 @@
 <?php 
-$file = fopen("ip.txt","a");
-$count_my_page = "ziyaret.txt";
-$hits = file($count_my_page);
-$hits[0] ++;
-$fp = fopen($count_my_page , "w");
-fputs($fp , "$hits[0]");
-fclose($fp);
 
 function get_client_ip() {
     $ipaddress = '';
@@ -36,7 +29,7 @@ if (strstr($ipaddresi, ', ')) {
 $date = (new DateTime())->setTimeZone(new DateTimeZone('Europe/Moscow'))->format('Y-m-d H:i:s');
 fwrite($file,$hits[0].') '. $date . '| ' . $ip."\n"); 
 fclose($file);
-echo "<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script><br><br><br><center>hi <b>" . $ipaddresi . "</b>. preciated to see you here.";
+echo "<script src='https://platform.linkedin.com/badges/js/profile.js' async defer type='text/javascript'></script><br><br><br><center>hi <b>" . $ipaddresi . "</b>. preciated to see you here.";
 echo "<br>me? just star dust, nothing more.. and known as sometimes who code.";
-echo "<br><br><br><br><iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/wZuW3YvHHLU?controls=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe><br><br><br><br><div class="badge-base LI-profile-badge" data-locale="tr_TR" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="ahmetgoksu" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://tr.linkedin.com/in/ahmetgoksu?trk=profile-badge">Ahmet Göksu</a></div><br><br>hello@goksu.in</center>";
+echo "<br><br><br><br><iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/wZuW3YvHHLU?controls=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe><br><br><br><br><div class='badge-base LI-profile-badge' data-locale='tr_TR' data-size='medium' data-theme='light' data-type='VERTICAL' data-vanity='ahmetgoksu' data-version='v1'><a class='badge-base__link LI-simple-link' href='https://tr.linkedin.com/in/ahmetgoksu?trk=profile-badge'>Ahmet Göksu</a></div><br><br>hello@goksu.in</center>";
 ?>
