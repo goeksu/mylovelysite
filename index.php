@@ -30,5 +30,6 @@ setcookie("1", "It is said that from the outside I look frighteningly serious!!?
 
 echo "<script src='https://platform.linkedin.com/badges/js/profile.js' async defer type='text/javascript'></script><br><br><br><center>hi <b>" . $ipaddresi . "</b>. preciated to see you here.";
 echo "<br>me? just star dust, nothing more.. and known as who code sometimes.";
-echo "<br><br><br><iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/wZuW3YvHHLU?controls=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe><br><br><br><div class='badge-base LI-profile-badge' data-locale='tr_TR' data-size='medium' data-theme='light' data-type='VERTICAL' data-vanity='ahmetgoksu' data-version='v1'><a class='badge-base__link LI-simple-link' href='https://tr.linkedin.com/in/ahmetgoksu?trk=profile-badge'></a></div><br><br><br>ahmet@goksu.in</center>";
+echo "<br><br><br><iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/wZuW3YvHHLU?controls=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe><br><br><br><div class='badge-base LI-profile-badge' data-locale='tr_TR' data-size='medium' data-theme='light' data-type='VERTICAL' data-vanity='ahmetgoksu' data-version='v1'><a class='badge-base__link LI-simple-link' href='https://tr.linkedin.com/in/ahmetgoksu?trk=profile-badge'></a></div><br><br><br>ahmet@goksu.in<br><a href='https://keybase.io/ahmetgoksu'>PGP</a></center>";
+
 ?>
