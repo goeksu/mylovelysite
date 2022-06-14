@@ -28,7 +28,9 @@ if (strstr($ipaddresi, ', ')) {
 setcookie("0", "Hey my curios friend. This website is simple enough to not to have vulnerabilities -except 3rd parties that i used-. However, I want you to know that I appreciate your effort.", time() + (86400 * 30*12), "/");
 setcookie("1", "It is said that from the outside I look frighteningly serious!!?? No man, I am friendly. Come and tell me these cookies. Cheers!", time() + (86400 * 30*12), "/");
 
-echo "<head><!-- Global site tag (gtag.js) - Google Analytics -->
+echo "
+<!DOCTYPE html>
+<html><head><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-YW5JHJ19FS\"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -36,7 +38,16 @@ echo "<head><!-- Global site tag (gtag.js) - Google Analytics -->
   gtag('js', new Date());
 
   gtag('config', 'G-YW5JHJ19FS');
-</script></head><br><br><br><center>hi <b>" . $ipaddresi . "</b>. preciated to see you here.
+</script></head>
+<body>
+
+<br><br><br><center>hi <b>" . $ipaddresi . "</b>. preciated to see you here.
 <br>me? just star dust, nothing more.. and known as who code sometimes.
-<br><br><br><iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/wZuW3YvHHLU?controls=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe><br><br><br><a href='https://www.linkedin.com/in/ahmetgoksu'>LinkedIn</a><br><br><br>ahmet@goksu.in<br><a href='https://keybase.io/ahmetgoksu'>PGP</a></center>";
+<br><br><br><iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/wZuW3YvHHLU?controls=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe><br><br><br><a href='https://www.linkedin.com/in/ahmetgoksu'>LinkedIn</a><br><br><br>ahmet@goksu.in<br><a href='https://keybase.io/ahmetgoksu'>PGP</a></center>
+
+</body>
+</html>
+
+
+";
 ?>
