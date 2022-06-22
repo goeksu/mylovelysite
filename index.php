@@ -41,7 +41,7 @@ echo "
 </script></head>
 <body>
 
-<br><br><br><center>hi <b><div title='this is your ip address'>" . $ipaddresi . "</div></b>. preciated to see you here.
+<br><br><br><center>hi <b><div style='display:inline-block;'title='this is your ip address'>" . $ipaddresi . "</div></b>. preciated to see you here.
 <br>me? just star dust, nothing more.. and known as who code sometimes.
 <br><br><br><iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/wZuW3YvHHLU?controls=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe><br><br><br><a href='https://www.linkedin.com/in/ahmetgoksu'>Take me to LinkedIn</a><br><br><br>ahmet@goksu.in<br><a href='https://keybase.io/ahmetgoksu'><div title='need to talk private?'>PGP</div></a></center>
 
