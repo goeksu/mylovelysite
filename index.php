@@ -30,7 +30,9 @@ setcookie("1", "It is said that from the outside I look frighteningly serious!!?
 
 echo "
 <!DOCTYPE html>
-<html><head><!-- Global site tag (gtag.js) - Google Analytics -->
+<html>
+<title>goksu 🧑‍💻</title>
+<head><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src='https://www.googletagmanager.com/gtag/js?id=G-YW5JHJ19FS'></script>
 <script>
   window.dataLayer = window.dataLayer || [];
