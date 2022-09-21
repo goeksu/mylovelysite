@@ -32,6 +32,7 @@ $username = "ba4c4a25dcad1f";
 $password = "92546991";
 $dbname = "heroku_e3feb629aefce6d";
 $sqltime = date('Y-m-d H:i:s');
+$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 // Create connection
 
@@ -41,8 +42,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO visitors (ip, time)
-VALUES ('$ipaddresi', '$sqltime')";
+$sql = "INSERT INTO visitors (ip, time,url)
+VALUES ('$ipaddresi', '$sqltime','$actual_link')";
 
 if ($conn->query($sql) === TRUE) {
   
