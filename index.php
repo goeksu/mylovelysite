@@ -63,15 +63,6 @@ echo "
 <!DOCTYPE html>
 <html>
 
-<head><!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src='https://www.googletagmanager.com/gtag/js?id=G-YW5JHJ19FS'></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YW5JHJ19FS');
-</script></head>
 <body>
 
 <br><br><br><center>hi <b><div style='display:inline-block;'title='this is your ip address'>" . $ipaddresi . "</div></b>. preciated to see you here.
