@@ -34,13 +34,22 @@ $dbname = "heroku_e3feb629aefce6d";
 $sqltime = date('Y-m-d H:i:s');
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+} 
+
 $sql = "INSERT INTO visitors (ip, time)
 VALUES ('$ipaddresi', '$sqltime')";
-$conn->query($sql);
 
-mysqli_close($conn);
+if ($conn->query($sql) === TRUE) {
+  echo "1";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
+$conn->close();
 //SET COOKIE
 
 setcookie("0", "Hey my curios friend. This website is simple enough to not to have vulnerabilities -except 3rd parties that i used-. However, I want you to know that I appreciate your effort.", time() + (86400 * 30*12), "/");
