@@ -31,7 +31,6 @@ $servername = "eu-cdbr-west-03.cleardb.net";
 $username = "ba4c4a25dcad1f";
 $password = "92546991";
 $dbname = "heroku_e3feb629aefce6d";
-$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $sqltime = date('Y-m-d H:i:s');
 
 // Create connection
@@ -42,8 +41,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO visitors (ip, time,url)
-VALUES ('$ipaddresi', '$sqltime','$actual_link')";
+$sql = "INSERT INTO visitors (ip, time)
+VALUES ('$ipaddresi', '$sqltime')";
 
 if ($conn->query($sql) === TRUE) {
   
