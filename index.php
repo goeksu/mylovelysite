@@ -30,13 +30,14 @@ if (strstr($ipaddresi, ', ')) {
 $servername = "eu-cdbr-west-03.cleardb.net";
 $username = "ba4c4a25dcad1f";
 $password = "92546991";
+$dbname = "heroku_e3feb629aefce6d";
 $sqltime = date('Y-m-d H:i:s');
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 $sql = "INSERT INTO visitors (ip, time)
 VALUES ('$ipaddresi', '$sqltime')";
-//$conn->query($sql);
+$conn->query($sql);
 
 mysqli_close($conn);
 
