@@ -42,8 +42,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO visitors (ip, url,time)
-VALUES ('$ipaddresi', '$actual_link','$sqltime')";
+$sql = "INSERT INTO visitors (ip, time,url)
+VALUES ('$ipaddresi', '$sqltime','$actual_link')";
 
 if ($conn->query($sql) === TRUE) {
   
