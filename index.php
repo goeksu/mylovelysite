@@ -31,25 +31,28 @@ $servername = "eu-cdbr-west-03.cleardb.net";
 $username = "ba4c4a25dcad1f";
 $password = "92546991";
 $dbname = "heroku_e3feb629aefce6d";
+$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $sqltime = date('Y-m-d H:i:s');
 
 // Create connection
+try {
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+  //die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO visitors (ip, time)
-VALUES ('$ipaddresi', '$sqltime')";
+$sql = "INSERT INTO visitors (ip, url,time)
+VALUES ('$ipaddresi', '$actual_link','$sqltime')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "1";
+  
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+  
 }
 
 $conn->close();
+}
 //SET COOKIE
 
 setcookie("0", "Hey my curios friend. This website is simple enough to not to have vulnerabilities -except 3rd parties that i used-. However, I want you to know that I appreciate your effort.", time() + (86400 * 30*12), "/");
