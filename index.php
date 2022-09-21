@@ -34,16 +34,6 @@ $dbname = "heroku_e3feb629aefce6d";
 $sqltime = date('Y-m-d H:i:s');
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-//Reroute
-if (stripos( $user_agent, 'Chrome') !== false)
-{
-   
-}
-
-elseif (stripos( $user_agent, 'Safari') !== false &&  $actual_link !== 'https://xn--ahmet-fo14d.goksu.in/')
-{
-   header("Location: https://xn--ahmet-fo14d.goksu.in/");
-}
 
 // Create connection
 
