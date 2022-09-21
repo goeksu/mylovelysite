@@ -34,7 +34,7 @@ $dbname = "heroku_e3feb629aefce6d";
 $sqltime = date('Y-m-d H:i:s');
 
 // Create connection
-try {
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
@@ -51,7 +51,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-}
+
 //SET COOKIE
 
 setcookie("0", "Hey my curios friend. This website is simple enough to not to have vulnerabilities -except 3rd parties that i used-. However, I want you to know that I appreciate your effort.", time() + (86400 * 30*12), "/");
