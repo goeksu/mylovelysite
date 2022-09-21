@@ -25,6 +25,23 @@ if (strstr($ipaddresi, ', ')) {
     $ipaddresi = $ips[0];
 }
 
+//ADD DB
+//mysql://ba4c4a25dcad1f:92546991@eu-cdbr-west-03.cleardb.net/heroku_e3feb629aefce6d?reconnect=true
+$servername = "eu-cdbr-west-03.cleardb.net";
+$username = "ba4c4a25dcad1f";
+$password = "92546991";
+$sqltime = date('Y-m-d H:i:s');
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+$sql = "INSERT INTO visitors (ip, time)
+VALUES ('$ipaddresi', '$sqltime')";
+$conn->query($sql);
+
+mysqli_close($conn);
+
+//SET COOKIE
+
 setcookie("0", "Hey my curios friend. This website is simple enough to not to have vulnerabilities -except 3rd parties that i used-. However, I want you to know that I appreciate your effort.", time() + (86400 * 30*12), "/");
 setcookie("1", "It is said that from the outside I look frighteningly serious!!?? No man, I am friendly. Come and tell me these cookies. Cheers!", time() + (86400 * 30*12), "/");
 
