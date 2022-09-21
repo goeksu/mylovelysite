@@ -36,7 +36,7 @@ $sqltime = date('Y-m-d H:i:s');
 $conn = new mysqli($servername, $username, $password);
 $sql = "INSERT INTO visitors (ip, time)
 VALUES ('$ipaddresi', '$sqltime')";
-$conn->query($sql);
+//$conn->query($sql);
 
 mysqli_close($conn);
 
