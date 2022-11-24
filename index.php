@@ -25,6 +25,7 @@ if (strstr($ipaddresi, ', ')) {
     $ipaddresi = $ips[0];
 }
 
+/**
 //ADD DB
 //mysql://ba4c4a25dcad1f:92546991@eu-cdbr-west-03.cleardb.net/heroku_e3feb629aefce6d?reconnect=true
 $servername = "eu-cdbr-west-03.cleardb.net";
@@ -53,6 +54,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
+**/
 
 //SET COOKIE
 
