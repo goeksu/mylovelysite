@@ -2,6 +2,8 @@
 My humble personal website. Humble as PHP. 
 For further information about simpleness: www.motherfuckingwebsite.com
 
+Website is behind cloudflare. Cloudflare has an awesome app called Zaraz that makes you able to add HTML and JS. All JS files are running on Zaraz.
+
 <h2>PunnyCode</h2>
 This website uses punnycode on safari browser. Have you ever seen an URL like: 📟ahmet.goksu.in ?
 this is actually xn--ahmet-fo14d.goksu.in, only safari is able to process it by default. You can check here: https://www.punycoder.com
