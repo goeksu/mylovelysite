@@ -1,5 +1,5 @@
 # mylovelysite
-My humble personal website. Humble as PHP. 
+My humble personal website. 
 For further information about simpleness: www.motherfuckingwebsite.com
 
 Website is behind cloudflare. Cloudflare has an awesome app called Zaraz that makes you able to add HTML and JS. All JS files are running on Zaraz.
