@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <script src="ytdefer.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <style>
         
@@ -47,12 +47,10 @@
     <p>here lie my <a href='https://resume.goksu.in' target='_blank'>⏯️resume</a> and <a href='https://www.linkedin.com/in/ahmetgoksu' target='_blank'>LinkedIn</a></p>
     <p>ahmet@goksu.in<br><a href='https://gist.githubusercontent.com/goeksu/13da58698e1dd042274697151bed2509/raw/e0b80bbff12f0bab97ff1903440ec0ce8a54853f/gistfile1.txt'><span title='need to talk private?'>PGP</span></a></p>
 </body>
-<script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    </script>
+
      
     <script>
-     ytdefer_setup();
+     
     $.get("https://ipinfo.io", function(response) {
            $('#ip').text(response.ip);
         }, "json")
