@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html lang='en'>
-<html>
- 
-<head>
-    <title>Goksu's Page</title>
-     
 
-<meta name='description' content='Enthusiast of all things powered by a CPU'>
-<link rel='icon' type='image/x-icon' href='favicon.ico'>
- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta charset="UTF-8">
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    </script>
-     
-    <script>
-     
-    $.get("https://ipinfo.io", function(response) {
-           $('#ip').text(response.ip);
-        }, "json")
-         
-    </script>
+<head>
+    <meta charset="UTF-8">
+    <title>Goksu's Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='description' content='Enthusiast of all things powered by a CPU'>
+    <link rel='icon' type='image/x-icon' href='favicon.ico'>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        #ip {
+            display:inline-block;
+        }
+    </style>
 </head>
- 
+
 <body>
-    <br><br><br><center>cheers <b><div id='ip' style='display:inline-block;'title='this is your ip address.. maybe wallet if available'></div></b>! it's a delight to witness your digital presence.<br>
-<br>me? merely a fragment of star dust, drifting through the vast expanse of reality. <br> yet, amid this vastness, i find an identity as one who weaves magic with <a href='https://github.com/goeksu'>code.</a>
-<br><br><br>
-<iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/wZuW3YvHHLU?controls=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe><br><br><br>
-here lie my <a href='https://resume.goksu.in' target='_blank'>⏯️resume</a> and <a href='https://www.linkedin.com/in/ahmetgoksu' target='_blank'>linkedin</a><br><br><br>ahmet@goksu.in<br><a href='https://gist.githubusercontent.com/goeksu/13da58698e1dd042274697151bed2509/raw/e0b80bbff12f0bab97ff1903440ec0ce8a54853f/gistfile1.txt'><div title='need to talk private?'>PGP</div></a></center>
+    <span>cheers <b><span id='ip' title='this is your ip address.. maybe wallet if available'></span></b>! it's a delight to witness your digital presence.</span><br>
+    <span>me? merely a fragment of star dust, drifting through the vast expanse of reality. 
+        <br>yet, amid this vastness, i find an identity as one who weaves magic with <a href='https://github.com/goeksu'>code.</a></span><br>
+    <iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/wZuW3YvHHLU?controls=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' loading="lazy"></iframe>
+    <p>here lie my <a href='https://resume.goksu.in' target='_blank'>⏯️resume</a> and <a href='https://www.linkedin.com/in/ahmetgoksu' target='_blank'>LinkedIn</a></p>
+    <p>ahmet@goksu.in<br><a href='https://gist.githubusercontent.com/goeksu/13da58698e1dd042274697151bed2509/raw/e0b80bbff12f0bab97ff1903440ec0ce8a54853f/gistfile1.txt'><span title='need to talk private?'>PGP</span></a></p>
 </body>
- 
+
+<script>
+    fetch('https://ipinfo.io')
+        .then(response => response.json())
+        .then(response => {
+            document.getElementById('ip').textContent = response.ip;
+        })
+        .catch(error => console.error('Error:', error));
+</script>
+
 </html>
