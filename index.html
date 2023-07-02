@@ -37,9 +37,13 @@
 </body>
 
 <script>
+    alert(1);
     fetch('https://ipinfo.io')
         .then(response => response.json())
         .then(response => {
+             alert(2);
+             alert(response.ip);
+            alert(response.json());
             document.getElementById('ip').textContent = response.ip;
         })
         .catch(error => console.error('Error:', error));
