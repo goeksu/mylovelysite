@@ -68,9 +68,7 @@ a {
   z-index: 2;
   pointer-events: none;
 }
-.overlay.overlay--vignette {
-  background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 100%);
-}
+
 .overlay.overlay--scanline {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.33) 25%, rgba(0, 0, 0, 0.33) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.33) 75%, rgba(0, 0, 0, 0.33) 100%);
   background-size: 4px 4px;
@@ -127,7 +125,7 @@ ul > li:before {
 </head>
 <body>
 <div class="overlay overlay--scanline"></div>
-<div class="overlay overlay--vignette"></div>
+
 <div class="flex-full-justify">
   <div class="flex-inner">
     <div class="text-center">
@@ -136,24 +134,47 @@ ul > li:before {
     <p>it's a delight to witness your digital presence.</p>
     <ul>
        <li><p>about me? merely a fragment of star dust, drifting through the vast expanse of reality.</p></li>
-       <li><p>yet, amid this vastness, i find an identity as one who weaves magic with <a href='https://github.com/goeksu'>code.</a></p></li>
+       <li><p>yet, amid this vastness, i find an identity as one who weaves magic with <a href='https://github.com/goeksu' target='_blank'>code.</a></p></li>
     </ul>
 
     <p>also, here lie my <a href='https://www.linkedin.com/in/ahmetgoksu' target='_blank'>linkedin.</a></p>
      <br>
-    <p class="text-center">press any key for <a href='https://resume.goksu.in' target='_blank'>resume</a><span class="blink">_</span></p>
+    <p class="text-center">press any key for <a href='https://resume.goksu.in' target='_blank'>resume<span class="blink">_</span></a></p>
   </div>
 </div>
   
 </body>
  <script>
-     
+var array; 
+var timer;
+
+function frameLooper () {
+  if (array.length > 0) {
+    document.getElementById("ip").innerHTML += array.shift();
+  } else {
+    clearTimeout(timer);
+      }
+  loopTimer = setTimeout('frameLooper()',70); 
+
+}
+
+
+     var string = "Javascript Typing Animation"; 
     $.get("https://ipinfo.io", function(response) {
-           $('#ip').text(response.ip);
+           if(response.ip.toString() != undefined)
+           string = response.ip.toString();
+          array = string.split("");
+          frameLooper();
         }, "json")
          
     document.onkeypress=function(e){
    window.location.href = "https://resume.goksu.in";
   }
+
+
+
+
+  
+
     </script>
 </html>
