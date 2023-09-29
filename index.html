@@ -56,13 +56,6 @@ body {
 a {
   color: #a1a1a1;
 }
-
-.yt{
-    width: 90%;
-    max-width:560px;
-    height: width /560*320;
-    
-    }
 .overlay {
   position: absolute;
   z-index: 2;
@@ -147,7 +140,8 @@ ul > li:before {
  <script>
 var array; 
 var timer;
-
+var string; 
+//hello stalker! reach me out on stalker@goksu.in
 function frameLooper () {
   if (array.length > 0) {
     document.getElementById("ip").innerHTML += array.shift();
@@ -155,26 +149,18 @@ function frameLooper () {
     clearTimeout(timer);
       }
   loopTimer = setTimeout('frameLooper()',70); 
-
 }
 
-
-     var string = "Javascript Typing Animation"; 
-    $.get("https://ipinfo.io", function(response) {
-           if(response.ip.toString() != undefined)
-           string = response.ip.toString();
-          array = string.split("");
-          frameLooper();
-        }, "json")
+$.get("https://ipinfo.io", function(response) {
+  if(response.ip.toString() != undefined){
+    string = response.ip.toString();
+    array = string.split("");}
+    frameLooper();
+  }, "json")
          
-    document.onkeypress=function(e){
-   window.location.href = "https://resume.goksu.in";
+  document.onkeypress=function(e){
+  window.location.href = "https://resume.goksu.in";
   }
-
-
-
-
-  
 
     </script>
 </html>
